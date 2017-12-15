@@ -1,0 +1,235 @@
+/* TABLE */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f1839;
+  font-size: 20px;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* HEADER */
+
+#clock {
+  font-weight: bold;
+padding: 10px;
+    width: 15%;
+    font-size: 40px;
+
+}
+
+.bus-icon {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: inline;
+  background-color: #0f1839;
+}
+
+#page {
+  float: left;
+}
+
+
+
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+.table { 
+  border: 0 !important;
+  border: 20px solid black;
+  width: 100% !important;
+  text-align: center;
+
+}
+
+.tablestyle {
+  line-height: 2.5;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background-color: #273A84; 
+}
+
+tr:nth-of-type(even) {
+  background-color: #0f1839;
+}
+th { 
+  color: white; 
+  font-weight: bold; 
+    text-align: center;
+    background-color: #0f1839;
+    font-size: 25px;
+}
+td, th { 
+  padding: 6px; 
+    text-align: center;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  /* Force table to not be like tables anymore */
+  .table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 50%; 
+  }
+  
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+  }
+}
+
+
+
+/* SHOWCASE */
+#showcase {
+  background:url('../images/intro-bg.jpg') no-repeat center center;
+}
+
+.showcase-content {
+  padding: 15px;
+  display: flex;
+}
+
+#showcase .row{
+  height: 130px;
+}
+
+#showcase h1 {
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+  margin:0;
+  padding-bottom:0;
+  text-align: center;
+}
+
+#showcase p {
+  color:#ccc;
+  margin:0;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+}
+
+
+.footer {
+  display: flex;
+}
+
+#announcement {
+  float: left;
+}
+
+#clock {
+  padding: 0;
+  width: 30%;
+}
+
+
+.marquee {
+    width: 100%;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.csbt {
+    height: 80px;
+    width: 300px;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+.csbt_text {
+  font-size: 15px;
+  text-align: start;
+  color: white;
+}
+
+.departures {
+  padding: 10px;
+
+}
+
+/*.realtime {
+  height: 830px;
+    overflow-y: scroll;
+}
+*/
+
+
+
+
+
+
+#contain {
+  height: 830px;  
+  overflow-y: scroll;  
+}
+#dataTable {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 110px;
+}
+#dataTable tbody td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+#table_fixed thead th {
+  padding: 10px;
+}
